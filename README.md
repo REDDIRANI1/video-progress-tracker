@@ -11,11 +11,15 @@ A React-based video player that tracks **unique watched intervals**, ensuring pr
 - 🎯 Auto-resumes playback from last watched position
 - 📊 Shows real-time progress as a percentage
 
+## 🛠️ Tech Stack
+ ReactJS
+ TypeScript 
+
 
 ## 🛠️ Setup Instructions
 
-1. Clone the repository
-git clone https://github.com/yourusername/video-progress-tracker.git
+1.Clone the repository
+git clone https://github.com/REDDIRANI1/video-progress-tracker.git
 cd video-progress-tracker
 npm install
 npm run dev
@@ -36,13 +40,13 @@ If they later rewatch 14s to 16s, no new time is counted.
 4.🧩 Merging Intervals (Unique Progress)
 We store each watched second in a Set, so duplicate views are automatically ignored. No need to manually merge overlapping intervals — just count the size of the set.
 
-5. 💾 Persistent Progress (Saving & Resuming)
+5.💾 Persistent Progress (Saving & Resuming)
 We use localStorage to:
 Save the Set of watched seconds as an array
 Save the last playback position
 Resume from this data when the user revisits
 
-6. 📉 Edge Case Handling
+6.📉 Edge Case Handling
 Skipped time: Not counted unless it's played
 Rewatching: Not re-counted
 Pausing: Does not affect progress
